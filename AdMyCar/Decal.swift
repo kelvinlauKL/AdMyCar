@@ -22,4 +22,16 @@ extension Decal {
       Decal(name: "Rainbow Apple", price: 250, image: #imageLiteral(resourceName: "colorfulApple"))
     ]
   }
+  
+  static var breastCancerDecals: [Decal] {
+    return [
+      Decal(name: "Ribbon", price: 0, image: #imageLiteral(resourceName: "pinkRibbon"))
+    ]
+  }
+  
+  static var saveTheChildrenDecals: [Decal] {
+    return [
+      Decal(name: "Save The Children", price: 0, image: #imageLiteral(resourceName: "saveTheChildren"))
+    ]
+  }
 }

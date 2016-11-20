@@ -27,14 +27,26 @@ struct Brand {
 
 // MARK: - TestBrands
 extension Brand {
-  static var testData: [Brand] {
+  static var socialGoodData: [Brand] {
     return [
-      Brand(name: "Apple", image: #imageLiteral(resourceName: "appleLogo"), designs: Decal.appleDecals),
+      Brand(name: "Breast Cancer", image: #imageLiteral(resourceName: "pinkRibbon"), designs: Decal.breastCancerDecals),
+      Brand(name: "Save The Children", image: #imageLiteral(resourceName: "saveTheChildren"), designs: Decal.saveTheChildrenDecals)
+    ]
+  }
+  
+  static var featuredTestData: [Brand] {
+    return [
       Brand(name: "Launch Academy", image: #imageLiteral(resourceName: "launchAcademyLogo"), designs: []),
       Brand(name: "Spring University", image: #imageLiteral(resourceName: "springuLogo"), designs: []),
       Brand(name: "Lighthouse Labs", image: #imageLiteral(resourceName: "lighthouseLogo"), designs: []),
+    ]
+  }
+  
+  static var testData: [Brand] {
+    return [
+      Brand(name: "SimpleReno", image: #imageLiteral(resourceName: "simplerenoLogo"), designs: []),
+      Brand(name: "Apple", image: #imageLiteral(resourceName: "appleLogo"), designs: Decal.appleDecals),
       Brand(name: "Hootsuite", image: #imageLiteral(resourceName: "hootsuiteLogo"), designs: []),
-      Brand(name: "SimpleReno", image: #imageLiteral(resourceName: "simplerenoLogo"), designs: [])
     ]
   }
 }

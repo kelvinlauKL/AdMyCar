@@ -13,18 +13,42 @@ final class DashboardViewController: UITableViewController {
   @IBOutlet fileprivate var lifetimeEarningsLabel: UILabel!
   @IBOutlet fileprivate var distanceTravelledLabel: UILabel!
   
-  fileprivate var decals: [Decal] = Decal.appleDecals
-  
+  fileprivate var decals: [Decal] = Decal.breastCancerDecals + Decal.saveTheChildrenDecals + Decal.appleDecals
+  fileprivate var bluetoothDetector: BluetoothDetector!
 }
 
 // MARK: - Life Cycle
 extension DashboardViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    bluetoothDetector = BluetoothDetector(delegate: self)
   }
 }
 
+// MARK: - UITableViewDelegate
+extension DashboardViewController {
+  enum Row: Int {
+    case decals, earningPotential, lifetimeEarnings, distanceDriven
+  }
+  
+  override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+    guard let row = Row(rawValue: indexPath.row) else { fatalError() }
+    switch row {
+    case .decals:
+      return
+    case .earningPotential:
+      displayAlert(message: "Your earning potential is based on your decals.")
+    case .lifetimeEarnings:
+      displayAlert(message: "The money you made since you started with us.")
+    case .distanceDriven:
+      displayAlert(message: "The distance you've driven since you started with us.")
+    }
+  }
+  
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
+  }
+}
 // MARK: - UICollectionViewDataSource
 extension DashboardViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -46,5 +70,12 @@ extension DashboardViewController: UICollectionViewDelegateFlowLayout {
     let width = collectionView.frame.height - sideInsets
     
     return CGSize(width: width, height: width)
+  }
+}
+
+// MARK: - BluetoothDelegate
+extension DashboardViewController: BluetoothDelegate {
+  func stickerDetected() {
+    print("sticker detected")
   }
 }
