@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3ke-vZ-RYS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Initial View Controller-->
+        <scene sceneID="vvh-ug-hKi">
+            <objects>
+                <viewController id="3ke-vZ-RYS" customClass="InitialViewController" customModule="AdMyCar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jvZ-O4-TCs"/>
+                        <viewControllerLayoutGuide type="bottom" id="jWh-g2-PKa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R8U-jX-vR0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carSticker" translatesAutoresizingMaskIntoConstraints="NO" id="rZY-4a-dMh">
+                                <rect key="frame" x="0.0" y="20" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AdMyCar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VQ1-v8-HeR">
+                                <rect key="frame" x="8" y="277.5" width="359" height="112.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="98"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand champion with benefits" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VNP-C0-c8k">
+                                <rect key="frame" x="8" y="398" width="359" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVh-xB-Lqx">
+                                <rect key="frame" x="131" y="432" width="112" height="33"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="YjJ-gM-qbW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Find out how">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="MW7-jq-i6I" kind="presentation" id="yM3-6c-Bml"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rZY-4a-dMh" firstAttribute="height" secondItem="R8U-jX-vR0" secondAttribute="height" id="23C-76-zGD"/>
+                            <constraint firstAttribute="trailing" secondItem="rZY-4a-dMh" secondAttribute="trailing" id="AR1-s0-5Ao"/>
+                            <constraint firstItem="VQ1-v8-HeR" firstAttribute="centerY" secondItem="R8U-jX-vR0" secondAttribute="centerY" id="ASe-5a-flp"/>
+                            <constraint firstItem="VQ1-v8-HeR" firstAttribute="leading" secondItem="R8U-jX-vR0" secondAttribute="leading" constant="8" id="DsD-G2-KpL"/>
+                            <constraint firstItem="VNP-C0-c8k" firstAttribute="leading" secondItem="R8U-jX-vR0" secondAttribute="leading" constant="8" id="HYl-zS-tSq"/>
+                            <constraint firstItem="WVh-xB-Lqx" firstAttribute="top" secondItem="VNP-C0-c8k" secondAttribute="bottom" constant="8" id="VlI-eS-ZY1"/>
+                            <constraint firstAttribute="trailing" secondItem="VQ1-v8-HeR" secondAttribute="trailing" constant="8" id="eNv-JO-wz8"/>
+                            <constraint firstItem="WVh-xB-Lqx" firstAttribute="centerX" secondItem="VNP-C0-c8k" secondAttribute="centerX" id="fbZ-gx-lco"/>
+                            <constraint firstItem="rZY-4a-dMh" firstAttribute="top" secondItem="jvZ-O4-TCs" secondAttribute="bottom" id="gRb-Q1-Lxu"/>
+                            <constraint firstAttribute="trailing" secondItem="VNP-C0-c8k" secondAttribute="trailing" constant="8" id="gWb-0e-8rU"/>
+                            <constraint firstItem="rZY-4a-dMh" firstAttribute="leading" secondItem="R8U-jX-vR0" secondAttribute="leading" id="pgY-Tt-r3K"/>
+                            <constraint firstItem="VNP-C0-c8k" firstAttribute="top" secondItem="VQ1-v8-HeR" secondAttribute="bottom" constant="7.5" id="ybh-XS-uPr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QhJ-sr-mzj"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RM1-3t-bQb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-599" y="-16"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="47k-hx-tmW">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="MW7-jq-i6I" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="LCC-m7-nbT">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="qbh-HY-axO" kind="relationship" relationship="viewControllers" id="fp9-aI-NLk"/>
+                        <segue destination="Tre-Ja-N2N" kind="relationship" relationship="viewControllers" id="XkG-LV-yrJ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZRM-a0-Bna" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="146" y="-16"/>
+        </scene>
+        <!--Dashboard-->
+        <scene sceneID="cef-Tu-QGx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Dashboard" id="Tre-Ja-N2N" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="zS3-AF-Vaw"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SEO-1H-X8w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-67" y="426"/>
+        </scene>
+        <!--Stickers-->
+        <scene sceneID="Q7A-PU-h1u">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Stickers" id="qbh-HY-axO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="xhu-8V-0GA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dEB-Y7-zxK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="387" y="426"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="carSticker" width="1685" height="2206"/>
+    </resources>
+</document>
